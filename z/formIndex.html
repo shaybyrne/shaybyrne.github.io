@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='en'>
+    
+<head> 
+    <title>Christmas Donation</title>
+    <meta charset="UTF-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+         
+  
+    <script src="js/myscripts.js"></script>
+    
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+      $(document).ready(function(){
+$('#date').datepicker({
+dateFormat: 'dd/mm/yy'});
+      });
+  </script>
+
+  <script>
+$(document).ready(function() {
+    $( ".decor" ).draggable();
+});
+    </script>
+    
+</head>
+    
+    <body>
+        <div id="wrapper">
+        <header>
+           
+        <h1>Christmas Donation</h1>
+    
+        
+             </header>
+        <main>
+             
+                <h2>Please Donate to our Orphange</h2>
+           
+                 <img id="xmasTree" src="img/xmasTree.png" width="500px" height="700px" alt= "Tree Image"><br/>
+               
+            
+                <form name="myForm" onsubmit="return validateMyForm();"  method="post">
+                    <fieldset>
+                        <legend>Dontate Here</legend>
+                        <h3>Payment: </h3>
+                        <p><label for="firstName">First Name: </label>
+                            <input type="text" name="firstName" size="23" id="firstNameBuy" title="First Name goes here" ></p>
+                        <p><label for ="lastName">Last Name: </label>
+                            <input type="text" name="lastName" size="23" id="lastNameBuy" ></p>
+                        <p><label for="email">Email:</label>
+                            <input type="text" name="email" size="28" placeholder="email@gmail.com" id="email" onchange="return validateEmailForm();" ></p>
+                        <p><label for="credCard">Credit Card Number: </label>
+                            <input type="text" name="credCard" value="" id="cc" placeholder="1234 1234 1234 1234" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></p>
+                         <p><label for="amount">Amount: </label>
+                        <input type="number" name="amount" placeholder="00.00" id="amount" ></p>
+                        <p><label for="Date">Date Purchase: </label>
+                        <input type="text" name="date" placeholder="DD/MM/YYYY" id="date" onchange="validateDate(document.myForm.date)"></p>
+                        
+                        <h3>Sender: </h3>
+                        
+                        <p><input id="sameInfoBtn" name="SameInfo" type="checkbox" onclick="sameInfo(this.form)">
+                            <label for="same">Same as Above</label></p>
+                        
+                      
+                        
+                        <p><label for="firstName">First Name: </label>
+                            <input type="text" name="firstName" size="23" id="firstNameTo" ></p>
+                        <p><label for ="lastName">Last Name: </label>
+                            <input type="text" name="lastName" size="23" id="lastNameTo" ></p>
+                                    
+                        
+                        <p id="type">What gift would you like to send? <br>
+                            <input type="radio" name="type" value="Toys" id="typeA">       
+                            <label for="typeA">Toys</label>
+                             <input type="radio" name="type" value="Food" id="typeB">       
+                            <label for="typeB">Food</label>
+                             <input type="radio" name="type" value="Clothes" id="typeC">       
+                            <label for="typeC">Clothes</label></p>
+                        
+                           
+                        <p><label for="persMsg">Send a personalised message with your gift:</label><br>
+                            <textarea name="persMsg" rows="5" cols="40" id="persMsg"></textarea></p>
+                        
+                      
+                        <input type="submit" value="Submit" id="button" >
+                    </fieldset>
+                </form>
+              <img class="decor" src="img/ballPurp.png" width="100px" height="100px" alt= "Purple Ball"><br/>
+                 <img class="decor" src="img/ballWRed.png" width="100px" height="100px" alt= "WhiteRed Ball"><br/>
+                 <img class="decor" src="img/ballRed.png" width="100px" height="100px" alt= "Red Ball"><br/>
+                 <img class="decor" src="img/bells.png" width="100px" height="100px" alt= "Bells"><br/>
+                 <img class="decor" src="img/candy.png" width="50px" height="100px" alt= "Candy"><br/>
+                 <img class="decor" src="img/star.png" width="100px" height="100px" alt= "Star"><br/>
+                 <img class="decor" src="img/pres.png" width="100px" height="100px" alt= "Presents">
+            <p id="instructions">Drag and drop the icons to decorate the Christmas tree</p>
+        </main>
+        <footer>
+            <p>Merry Christmas and Happy New Year! Thanks for your support.</p>
+        </footer>
+        </div>
+    </body>
+</html>

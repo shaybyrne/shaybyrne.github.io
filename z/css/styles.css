@@ -1,0 +1,47 @@
+div#wrapper{
+              width:960px;
+              margin-left: auto;
+              margin-right: auto;
+              padding:5px;
+            }
+
+body { 
+                background-image: url(../img/backg.jpg); 
+                }
+fieldset{
+            width:300px;
+            float:right;
+}
+#xmasTree{
+    float: left
+}
+
+
+footer{
+    clear:both;
+}
+h1, h2, h3, p, legend, #button{
+    font-family: 'Fjalla One', sans-serif;
+}
+legend{
+    font-size: 18pt:
+}
+       h1 {
+                text-align: center;
+                font-size: 40pt;
+                }
+h2{
+    text-align: center;
+}
+footer p{
+    font-size: 20pt;
+}
+#instructions{
+    font-size: 15pt;
+}
+#button{
+    font-size: 16pt;
+}
+p label{
+    font-size: 13pt;
+}
